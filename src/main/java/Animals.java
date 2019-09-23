@@ -1,14 +1,24 @@
 public class Animals {
-    private int id;
     private String name;
-    public Animals(int id, String name){
-        this.id = id;
+    public Animals(String name){
         this.name = name;
     }
     public String getName(){
         return name;
     }
-    public int getId(){
-        return id;
+//    public int getId(){
+//        return id;
+//    }
+
+    @Override
+    public boolean equals(Object otherAnimal){
+        if (!(otherAnimal instanceof Animals)) {
+            return false;
+        } else {
+            Animals newAnimal = (Animals) otherAnimal;
+            return this.getName().equals(newAnimal.getName());
+        }
     }
+
+
 }
