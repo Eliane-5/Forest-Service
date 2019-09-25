@@ -1,0 +1,16 @@
+{{#partial "content"}}
+    <div class="container">
+            {{#if animal}}
+                <h1>Animal list!</h1>
+                {{#each animal }}
+                    <p>ANIMAL</p>
+                    <p>{{ name }} </p>
+                {{/each}}
+            {{else}}
+                <h1>No Animals sighted yet</h1>
+            {{/if}}
+    </div>
+
+{{/partial}}
+
+{{> layout.hbs}}

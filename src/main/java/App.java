@@ -19,17 +19,22 @@ public class App {
         post("/animal/new", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             String name = request.queryParams("name");
-            int id = Integer.parseInt(request.queryParams("id"));
             Animals newAnimal = new Animals(name);
             model.put("animal", newAnimal);
+            newAnimal.save();
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 //        Show all animals on home page
-        get("/", (req, res) -> {
+        get("/allAnimals", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             List<Animals> animals = Animals.all();
-            model.put("animals", animals);
-            return new ModelAndView(model, "index.hbs");
+            model.put("animal", animals);
+            return new ModelAndView(model, "allAnimals.hbs");
         }, new HandlebarsTemplateEngine());
+//        Making a home pathway
+        get("/",(request, response) ->{
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "index.hbs");
+        }, new HandlebarsTemplateEngine() );
     }
 }
