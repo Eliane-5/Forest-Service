@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{#block "title"}}Forest-Service{{/block}}</title>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    </head>
+    <body style="color:white;">
+        <ul style="text-align:center;background-color:white;" class="nav nav-tabs">
+            <li role="presentation"><a style="color:black;"  href="/">Animals</a></li>
+            <li role="presentation"><a style="color:black;"  href="/animal/new">Add Animal</a></li>
+        </ul>
+        <div class="container">
+        <!--begin main template-->
+            <div class="page-header">
+
+            </div>
+
+            <div class="col-md-12">
+                {{#block "content"}}
+                {{/block}}
+
+            </div>
+        </div>
+        <!--end main template-->
+        {{#block "footer"}}
+    </body>
+</html>
+{{/block}}
