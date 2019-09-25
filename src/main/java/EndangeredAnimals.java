@@ -7,11 +7,19 @@ public class EndangeredAnimals {
     private String health;
     private int age;
     private int id;
+    private int ageCalc;
+    private int healthLevel;
+
+    public static final int MAX_HEALTH_LEVEL = 10;
+    public static final int MAX_AGE_LEVEL = 10;
+    public static final int MIN_ALL_LEVELS = 0;
     public EndangeredAnimals(int animalId, String name, String health, int age){
         this.name = name;
         this.animalId = animalId;
         this.health = health;
         this.age = age;
+        this.healthLevel = MAX_HEALTH_LEVEL/2;
+        this.ageCalc = MAX_AGE_LEVEL /2;
     }
     public String getName(){
         return name;
@@ -27,6 +35,12 @@ public class EndangeredAnimals {
     }
     public int getId(){
         return id;
+    }
+    public int getHealthLevel(){
+        return healthLevel;
+    }
+    public int getAgeCalc(){
+        return ageCalc;
     }
     @Override
     public boolean equals(Object otherAnimal){

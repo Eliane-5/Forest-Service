@@ -77,5 +77,14 @@ public class EndangeredAnimalsTest {
         EndangeredAnimals savedEndangeredAnimal = EndangeredAnimals.find(testEndangeredAnimal.getId());
         assertEquals(savedEndangeredAnimal.getAnimalId(), testAnimal.getId());
     }
-
+//    @Test
+//    public void endangeredAnimal_instantiatesWithHalfFullHealthLevel(){
+//        EndangeredAnimals testAnimal = new EndangeredAnimals(1,"dogs","good",2);
+//        assertEquals(testAnimal.getHealthLevel(), (EndangeredAnimals.MAX_HEALTH_LEVEL / 2));
+//    }
+//    @Test
+//    public void endangeredAnimal_instantiatesWithHalfFullAgeLevel(){
+//        EndangeredAnimals testAnimal = new EndangeredAnimals(1,"dogs","good",2);
+//        assertEquals(testAnimal.getAgeCalc(), (EndangeredAnimals.MAX_AGE_LEVEL / 2));
+//    }
 }
