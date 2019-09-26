@@ -3,27 +3,25 @@ import java.util.List;
 import org.sql2o.*;
 public class EndangeredAnimals {
     private String name;
-    private String health;
+    private int health;
     private int age;
     private int id;
-    private int ageCalc;
-    private int healthLevel;
+    private String ageCalc;
+    private String healthLevel;
 
-    public static final int MAX_HEALTH_LEVEL = 10;
-    public static final int MAX_AGE_LEVEL = 10;
+    public static final int MID_ALL_LEVELS = 5;
+    public static final int MID_AGE_LEVEL = 10;
     public static final int MIN_ALL_LEVELS = 0;
 
-    public EndangeredAnimals(String name, String health, int age){
+    public EndangeredAnimals(String name, int health, int age){
         this.name = name;
         this.health = health;
         this.age = age;
-        this.healthLevel = MAX_HEALTH_LEVEL/2;
-        this.ageCalc = MAX_AGE_LEVEL /2;
     }
     public String getName(){
         return name;
     }
-    public String getHealth(){
+    public int getHealth(){
         return health;
     }
     public int getAge(){
@@ -32,10 +30,19 @@ public class EndangeredAnimals {
     public int getId(){
         return id;
     }
-    public int getHealthLevel(){
+    public String getHealthLevel(){
+        if(this.health == MID_ALL_LEVELS){
+            healthLevel = "okay";
+        }
+        else if(this.health>MID_ALL_LEVELS){
+            healthLevel = "healthy";
+        }
+        else {
+            healthLevel = "ill";
+        }
         return healthLevel;
     }
-    public int getAgeCalc(){
+    public String getAgeCalc(){
         return ageCalc;
     }
     public void save() {

@@ -47,7 +47,7 @@ public class App {
         post("/EndangeredAnimal/new", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             String name = request.queryParams("name");
-            String health = request.queryParams("health");
+            int health = Integer.parseInt(request.queryParams("health"));
             int age = Integer.parseInt(request.queryParams("age"));
             EndangeredAnimals newEndangeredAnimal = new EndangeredAnimals(name,health,age);
             model.put("endangeredAnimal", newEndangeredAnimal);
