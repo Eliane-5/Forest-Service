@@ -2,14 +2,45 @@
         {{#if sightings}}
             <h3 style="text-align:center; text-decoration:underline;margin-bottom:20px;">ALL SIGHTINGS</h3>
             {{#each sightings }}
-                <ol>
-                    <li><strong>Sighting made for animal named:<em style="text-decoration:underline;"> {{ animalName }}</em>,at <em style="text-decoration:underline;">{{ location }}</em>,by ranger <em style="text-decoration:underline;">{{ rangerName }}</em>.</strong></li>
-                </ol>
+                <table id="t01">
+                    <tr>
+                        <th id="header">Animal</th>
+                        <th id="header">Location</th>
+                        <th id="header">Ranger</th>
+                    </tr>
+                    <tr>
+                        <td id="data">{{ animalName }}</td>
+                        <td id="data">{{ location }}</td>
+                        <td id="data">{{ rangerName }}</td>
+                    </tr>
+                </table>
              {{/each}}
         {{else}}
             <h3>No Sightings made yet yet</h3>
         {{/if}}
 
 {{/partial}}
-
+<style>
+    table#t01 {
+      width:100%;
+    }
+    table#t01 , th#header, td#data {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th#header, td#data {
+      padding: 15px;
+      text-align: left;
+    }
+    table#t01 tr:nth-child(even) {
+      background-color: #eee;
+    }
+    table#t01 tr:nth-child(odd) {
+     background-color: #fff;
+    }
+    table#t01 th#header {
+      background-color: black;
+      color: white;
+    }
+</style>
 {{> layout.hbs}}

@@ -22,14 +22,14 @@
 
                     <table style="text-align:center;">
                         <tr >
-                            <th style="padding-right: 10%;">Name</th>
-                            <th style="padding: 5%;">Health level</th>
-                            <th style="padding: 5%;">Age level</th>
+                            <th id="header">Name</th>
+                            <th id="header">Health level</th>
+                            <th id="header">Age level</th>
                         </tr>
                         <tr>
-                            <td style="padding-right: 19%;"><strong>{{ name }} </strong></td>
-                            <td style="padding: 5%;">{{ healthLevel }} </td>
-                            <td style="padding: 5%;">{{ ageCalc }}</td>
+                            <td id="data"><strong>{{ name }} </strong></td>
+                            <td id="data">{{ healthLevel }} </td>
+                            <td id="data">{{ ageCalc }}</td>
                         </tr>
                     </table>
                     {{/each}}
@@ -41,16 +41,15 @@
     </div>
 {{/partial}}
 <style>
-    table,th,td {
+    table,th#header,td#data {
         border: 1px solid black;
         border-collapse:collapse;
     }
-    th, td {
-        padding: 500%;
+    th#header, td#data {
+        padding: 15px;
         border-left: 1px solid black;
-        margin:13%;
     }
-    th {
+    th#header {
         text-align: left;
     }
     table {
