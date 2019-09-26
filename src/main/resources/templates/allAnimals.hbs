@@ -4,22 +4,34 @@
         <h1 style="text-align:center;">ANIMALS</h1>
             <div class="col-md-6">
                 {{#if animal}}
-                    <h3>Non-Endangered animals list!</h3>
+                    <h3 style="text-decoration:underline;">Non-Endangered animals list!</h3>
                     {{#each animal }}
-                        <p>{{ id }}: {{ name }} </p>
+                        <h4 style="text-align:left;">---{{ id }}---</h4>
+
+                        <h4><strong>{{ name }}</strong> </h5>
                     {{/each}}
                 {{else}}
-                    <h1>No Animals registered yet</h1>
+                    <h1>No Animals registered yet</h4>
                 {{/if}}
             </div>
             <div class="col-md-6">
                 {{#if endangeredAnimal}}
-                    <h3>Endangered animals list!</h3>
+                    <h3 style="text-decoration:underline;">Endangered animals list!</h3>
                     {{#each endangeredAnimal }}
-                        <p>----{{ id }}----</p>
-                        <p>{{ name }} </p>
-                        <p>{{ healthLevel }} </p>
-                        <p>{{ ageCalc }} </p>
+                        <h4 style="text-align:left;">----{{ id }}----</h4>
+
+                    <table style="text-align:center;">
+                        <tr >
+                            <th style="padding-right: 10%;">Name</th>
+                            <th style="padding: 5%;">Health level</th>
+                            <th style="padding: 5%;">Age level</th>
+                        </tr>
+                        <tr>
+                            <td style="padding-right: 19%;"><strong>{{ name }} </strong></td>
+                            <td style="padding: 5%;">{{ healthLevel }} </td>
+                            <td style="padding: 5%;">{{ ageCalc }}</td>
+                        </tr>
+                    </table>
                     {{/each}}
                 {{else}}
                     <h1>No Endangered Animals registered yet</h1>
@@ -28,5 +40,21 @@
         </div>
     </div>
 {{/partial}}
-
+<style>
+    table,th,td {
+        border: 1px solid black;
+        border-collapse:collapse;
+    }
+    th, td {
+        padding: 500%;
+        border-left: 1px solid black;
+        margin:13%;
+    }
+    th {
+        text-align: left;
+    }
+    table {
+        border-spacing: 5%;
+    }
+</style>
 {{> layout.hbs}}
