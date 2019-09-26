@@ -1,0 +1,17 @@
+{{#partial "content"}}
+        {{#if sightings}}
+            <h1 style="text-align:center;">ALL SIGHTINGS</h1>
+            {{#each sightings }}
+                <p>Sighting</p>
+                <p>{{ animalId }} </p>
+                <p>{{ location }} </p>
+                <p>{{ rangerName }} </p>
+
+             {{/each}}
+        {{else}}
+            <h1>No Sightings made yet yet</h1>
+        {{/if}}
+
+{{/partial}}
+
+{{> layout.hbs}}
