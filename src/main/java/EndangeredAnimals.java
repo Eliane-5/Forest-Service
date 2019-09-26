@@ -9,9 +9,9 @@ public class EndangeredAnimals {
     private String ageCalc;
     private String healthLevel;
 
-    public static final int MID_ALL_LEVELS = 5;
-    public static final int MID_AGE_LEVEL = 10;
-    public static final int MIN_ALL_LEVELS = 0;
+    public static final int MID_HEALTH_LEVELS = 5;
+    public static final int MIN_ALL_LEVELS = 1;
+    public static final int MID_AGE_LEVELS = 6;
 
     public EndangeredAnimals(String name, int health, int age){
         this.name = name;
@@ -31,10 +31,10 @@ public class EndangeredAnimals {
         return id;
     }
     public String getHealthLevel(){
-        if(this.health == MID_ALL_LEVELS){
+        if(this.health == MID_HEALTH_LEVELS){
             healthLevel = "okay";
         }
-        else if(this.health>MID_ALL_LEVELS){
+        else if(this.health>MID_HEALTH_LEVELS ){
             healthLevel = "healthy";
         }
         else {
@@ -43,6 +43,16 @@ public class EndangeredAnimals {
         return healthLevel;
     }
     public String getAgeCalc(){
+        if(this.age<=MIN_ALL_LEVELS){
+            ageCalc = "a newborn";
+        }
+        else if(this.age>=MIN_ALL_LEVELS && this.age<= MID_AGE_LEVELS ){
+            ageCalc = "young";
+        }
+        else {
+            ageCalc = "an adult";
+
+        }
         return ageCalc;
     }
     public void save() {
