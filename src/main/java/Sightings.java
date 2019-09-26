@@ -3,19 +3,19 @@ import java.util.List;
 import org.sql2o.*;
 
 public class Sightings {
-    private int animalId;
+    private String animalName;
     private String location;
     private String rangerName;
     private int id;
 
-    public Sightings(int animalId,String location,String rangerName){
-        this.animalId = animalId;
+    public Sightings(String animalName,String location,String rangerName){
+        this.animalName = animalName;
         this.location= location;
         this.rangerName = rangerName;
     }
 
-    public int getAnimalId() {
-        return animalId;
+    public String getAnimalName() {
+        return animalName;
     }
 
     public String getLocation() {
@@ -30,9 +30,9 @@ public class Sightings {
     }
     public void save() {
         try(Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO sightings (animalId,location,rangerName) VALUES (:animalId,:location,:rangerName)";
+            String sql = "INSERT INTO sightings (animalName,location,rangerName) VALUES (:animalName,:location,:rangerName)";
             this.id = (int) con.createQuery(sql,true)
-                    .addParameter("animalId", this.animalId)
+                    .addParameter("animalName", this.animalName)
                     .addParameter("location", this.location)
                     .addParameter("rangerName", this.rangerName)
                     .executeUpdate()

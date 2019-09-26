@@ -59,16 +59,20 @@ public class App {
 
         get("/sight/new", (req,res)->{
             Map<String, Object> model = new HashMap<>();
+            List<Animals> animals = Animals.all();
+            List<EndangeredAnimals> endangeredAnimals = EndangeredAnimals.all();
+            model.put("endangeredAnimal", endangeredAnimals);
+            model.put("animal", animals);
             return new ModelAndView(model, "sighting-form.hbs");
         }, new HandlebarsTemplateEngine());
 
 //        post: post new Sighting entered
         post("/sight/new", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            int animalId = Integer.parseInt(request.queryParams("animalId"));
+            String animalName = request.queryParams("animalName");
             String location = request.queryParams("location");
             String rangerName = request.queryParams("rangerName");
-            Sightings sighting = new Sightings(animalId,location,rangerName);
+            Sightings sighting = new Sightings(animalName,location,rangerName);
             model.put("sighting", sighting);
             sighting.save();
             return new ModelAndView(model, "success.hbs");

@@ -1,12 +1,19 @@
 {{#partial "content"}}
     <h1>Add a Sighting!</h1>
              <form action="/sight/new" method="post">
-                <label for="animalId">Animal Id:</label><br>
-                <input id="animalId" name="animalId" type="text"><br>
                 <label for="location">Location:</label><br>
                 <input id="location" name="location" type="text"><br>
                 <label for="rangerName">Ranger's Name:</label><br>
                 <input id="rangerName" name="rangerName" type="text"><br>
+                <label for="animalName">Select animal name:</label><br>
+                <select name="animalName">
+                       {{#each endangeredAnimal}}
+                            <option>{{name}}</option>
+                       {{/each}}
+                        {{#each animal}}
+                            <option>{{name}}</option>
+                        {{/each}}
+                </select>
                 <button type="submit" class="btn btn-default">Go!</button>
              </form>
 {{/partial}}
