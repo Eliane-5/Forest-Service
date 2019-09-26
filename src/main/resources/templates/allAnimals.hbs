@@ -1,16 +1,33 @@
 {{#partial "content"}}
     <div class="container">
-            {{#if animal}}
-                <h1>Animal list!</h1>
-                {{#each animal }}
-                    <p>ANIMAL</p>
-                    <p>{{ name }} </p>
-                {{/each}}
-            {{else}}
-                <h1>No Animals sighted yet</h1>
-            {{/if}}
+        <div class="row">
+        <h1 style="text-align:center;">ANIMALS</h1>
+            <div class="col-md-6">
+                {{#if animal}}
+                    <h3>Non-Endangered animals list!</h3>
+                    {{#each animal }}
+                        <p>ANIMAL</p>
+                        <p>{{ name }} </p>
+                    {{/each}}
+                {{else}}
+                    <h1>No Animals registered yet</h1>
+                {{/if}}
+            </div>
+            <div class="col-md-6">
+                {{#if endangeredAnimal}}
+                    <h3>Endangered animals list!</h3>
+                    {{#each endangeredAnimal }}
+                        <p>ANIMAL</p>
+                        <p>{{ name }} </p>
+                        <p>{{ health }} </p>
+                        <p>{{ age }} </p>
+                    {{/each}}
+                {{else}}
+                    <h1>No Endangered Animals registered yet</h1>
+                {{/if}}
+            </div>
+        </div>
     </div>
-
 {{/partial}}
 
 {{> layout.hbs}}

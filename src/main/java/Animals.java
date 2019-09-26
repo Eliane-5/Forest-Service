@@ -49,12 +49,20 @@ public class Animals {
             return animal;
         }
     }
-    public List<EndangeredAnimals> getEndangeredAnimals() {
+    public List<Sightings> getSightings() {
         try(Connection con = DB.sql2o.open()) {
             String sql = "SELECT * FROM sightings where animalId=:id";
             return con.createQuery(sql)
                     .addParameter("id", this.id)
-                    .executeAndFetch(EndangeredAnimals.class);
+                    .executeAndFetch(Sightings.class);
         }
     }
+//    public List<EndangeredAnimals> getEndangeredAnimals() {
+//        try(Connection con = DB.sql2o.open()) {
+//            String sql = "SELECT * FROM endangeredanimal where animalId=:id";
+//            return con.createQuery(sql)
+//                    .addParameter("id", this.id)
+//                    .executeAndFetch(EndangeredAnimals.class);
+//        }
+//    }
 }

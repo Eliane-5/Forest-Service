@@ -55,15 +55,15 @@ public class AnimalsTest {
         secondAnimal.save();
         assertEquals(Animals.find(secondAnimal.getId()), secondAnimal);
     }
-    @Test
-    public void getEndangeredAnimals_retrievesAllEndangeredAnimalsFromDatabase_EndangeredAnimalsList() {
-        Animals testAnimal = new Animals("Henry");
-        testAnimal.save();
-        EndangeredAnimals firstEndangeredAnimal = new EndangeredAnimals(testAnimal.getId(),"cats","good",2);
-        firstEndangeredAnimal.save();
-        EndangeredAnimals secondEndangeredAnimal = new EndangeredAnimals(testAnimal.getId(),"cats","good",2);
-        secondEndangeredAnimal.save();
-        EndangeredAnimals[] endangeredAnimals = new EndangeredAnimals[] { firstEndangeredAnimal, secondEndangeredAnimal };
-        assertTrue(testAnimal.getEndangeredAnimals().containsAll(Arrays.asList(endangeredAnimals)));
-    }
+//    @Test
+//    public void getEndangeredAnimals_retrievesAllEndangeredAnimalsFromDatabase_EndangeredAnimalsList() {
+//        Animals testAnimal = new Animals("Henry");
+//        testAnimal.save();
+//        EndangeredAnimals firstEndangeredAnimal = new EndangeredAnimals(testAnimal.getId(),"cats","good",2);
+//        firstEndangeredAnimal.save();
+//        EndangeredAnimals secondEndangeredAnimal = new EndangeredAnimals(testAnimal.getId(),"cats","good",2);
+//        secondEndangeredAnimal.save();
+//        EndangeredAnimals[] endangeredAnimals = new EndangeredAnimals[] { firstEndangeredAnimal, secondEndangeredAnimal };
+//        assertTrue(testAnimal.getEndangeredAnimals().containsAll(Arrays.asList(endangeredAnimals)));
+//    }
 }
