@@ -1,9 +1,13 @@
 {{#partial "content"}}
-    <h1>Add a new Animal!</h1>
-             <form action="/animal/new" method="post">
-                <label for="name">Animal name</label><br>
-                <input id="name" name="name" type="text"><br>
-                <button type="submit" class="btn btn-default">Go!</button>
-             </form>
+    <h3>Add a new Animal!</h3>
+        <form action="/animal/new" method="post">
+            <div class="form-group">
+                <label for="name">Animal name:</label><br>
+                <input class="form-control" id="name" name="name" type="text"><br>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-default">ADD</button>
+            </div>
+        </form>
 {{/partial}}
 {{> layout.hbs}}
