@@ -6,8 +6,7 @@
                 {{#if animal}}
                     <h3>Non-Endangered animals list!</h3>
                     {{#each animal }}
-                        <p>ANIMAL</p>
-                        <p>{{ name }} </p>
+                        <p>{{ id }}: {{ name }} </p>
                     {{/each}}
                 {{else}}
                     <h1>No Animals registered yet</h1>
@@ -17,7 +16,7 @@
                 {{#if endangeredAnimal}}
                     <h3>Endangered animals list!</h3>
                     {{#each endangeredAnimal }}
-                        <p>ANIMAL</p>
+                        <p>----{{ id }}----</p>
                         <p>{{ name }} </p>
                         <p>{{ health }} </p>
                         <p>{{ age }} </p>

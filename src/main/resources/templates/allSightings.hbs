@@ -1,15 +1,13 @@
 {{#partial "content"}}
         {{#if sightings}}
-            <h1 style="text-align:center;">ALL SIGHTINGS</h1>
+            <h3 style="text-align:center; text-decoration:underline;margin-bottom:20px;">ALL SIGHTINGS</h3>
             {{#each sightings }}
-                <p>Sighting</p>
-                <p>{{ animalId }} </p>
-                <p>{{ location }} </p>
-                <p>{{ rangerName }} </p>
-
+                <ol>
+                    <li><strong>Sighting made for animal with id:<em> {{ animalId }}</em>,at <em style="text-decoration:underline;">{{ location }}</em>,by ranger <em style="text-decoration:underline;">{{ rangerName }}</em>.</strong></li>
+                </ol>
              {{/each}}
         {{else}}
-            <h1>No Sightings made yet yet</h1>
+            <h3>No Sightings made yet yet</h3>
         {{/if}}
 
 {{/partial}}
