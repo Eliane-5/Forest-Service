@@ -1,9 +1,24 @@
 {{#partial "content"}}
-    <button type="button"><a href="/animal/new">add an Animal</a></button>
-    <button type="button"><a href="/EndangeredAnimal/new">add an Endangered Animal</a></button>
-    <button type="button"><a href="/sight/new">Make a sighting</a></button>
+    <div style="text-align:center;">
+        <div>
+            <a id="button" style="background-color:black;color:white;" href="/animal/new" class="btn btn-secondary btn-lg" role="button">add an Animal</a><br><br><br>
+        </div>
+        <div>
+            <a id="button" style="background-color:black;color:white;" href="/EndangeredAnimal/new" class="btn btn-secondary btn-lg" role="button">add an Endangered Animal</a><br><br>
+        </div>
+        <div>
+            <a id="button" style="background-color:black;color:white;" href="/sight/new" class="btn btn-secondary btn-lg" role="button" >Make a sighting</a><br>
+        </div>
+    </div>
 {{/partial}}
 <style>
-
+    body{
+        background-image: url("https://cdn.shopify.com/s/files/1/2341/3995/articles/dan-otis-335622-unsplash_5_7477a499-c2c3-403d-b06a-b98bbf243793_1024x768.progressive.jpg?v=1541615146");
+        background-repeat:no-repeat;
+        background-size:cover;
+    }
+    #button:hover{
+        text-decoration:underline;
+    }
 </style>
 {{> layout.hbs}}

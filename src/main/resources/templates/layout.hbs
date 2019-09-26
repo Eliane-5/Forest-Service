@@ -5,15 +5,15 @@
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
     </head>
     <body>
-        <ul class="nav nav-tabs">
-            <li role="presentation"><a href="/">HOME</a></li>
-            <li role="presentation"><a href="/allAnimals">All ANIMALS</a></li>
-            <li role="presentation"><a href="/allSightings">All SIGHTINGS</a></li>
+        <ul style="background-color:black;" class="nav nav-tabs">
+            <li role="presentation"><a id="nav" style="color:white;" href="/">HOME</a></li>
+            <li role="presentation"><a id="nav" style="color:white;" href="/allAnimals">All ANIMALS</a></li>
+            <li role="presentation"><a id="nav" style="color:white;" href="/allSightings">All SIGHTINGS</a></li>
         </ul>
         <div class="container">
         <!--begin main template-->
             <div class="page-header">
-                <h1 style="text-align:center;">FOREST-SERVICE</h1>
+                <h1 style="text-align:center; color:black;">FOREST-SERVICE</h1>
             </div>
 
             <div class="col-md-12">
@@ -22,7 +22,15 @@
             </div>
         </div>
         <!--end main template-->
+
         {{#block "footer"}}
+        <style>
+            #nav:hover{
+                background-color:black;
+                border-left: 1px solid white;
+                border-right: 1px solid white;
+            }
+        </style>
     </body>
 </html>
 {{/block}}
