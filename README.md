@@ -30,5 +30,5 @@ To clone this repository successfully one needs:
 ## Support and contact details
 May you encounter any issue or have any questions and suggestions please contact me at **irankundaeliane9@gmail.com**
 ### License
-I hereby grant all access to everyone. 
+I hereby grant all access to everyone to view and use the code in this repository as they wish. 
 Copyright (c) 2019 **Eliane**
