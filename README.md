@@ -11,7 +11,7 @@ To clone this repository successfully one needs:
 * Installation of IntelliJ IDEA is needed.
 * Installation of postgresql is needed.
 #### DATABASE installation
-*In PSQL:
+**In PSQL**:
 * CREATE DATABASE wildlife_tracker;
 *  \c wildlife_tracker;
 * CREATE TABLE animals (id serial PRIMARY KEY, name varchar);
