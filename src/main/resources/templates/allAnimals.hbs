@@ -1,14 +1,12 @@
 {{#partial "content"}}
-    <div class="container">
+    <div style="color:white;" class="container">
         <div class="row">
         <h1 style="text-align:center;">ANIMALS</h1>
             <div class="col-md-6">
                 {{#if animal}}
                     <h3 style="text-decoration:underline;">Non-Endangered animals list!</h3>
                     {{#each animal }}
-                        <h4 style="text-align:left;">---{{ id }}---</h4>
-
-                        <h4><strong>{{ name }}</strong> </h5>
+                        <h4 style="text-align:left;">---{{ id }}--- {{ name }}</h4>
                     {{/each}}
                 {{else}}
                     <h1>No Animals registered yet</h4>
@@ -20,7 +18,7 @@
                     {{#each endangeredAnimal }}
                         <h4 style="text-align:left;">----{{ id }}----</h4>
 
-                    <table style="text-align:center;">
+                    <table style="text-align:center; color:white;">
                         <tr >
                             <th id="header">Name</th>
                             <th id="header">Health level</th>
@@ -55,5 +53,11 @@
     table {
         border-spacing: 5%;
     }
+    body{
+        background-image: url("https://bcc53877d7aa0a135b9a-1452ca75bf8985207bb5b0c44a65ef28.ssl.cf4.rackcdn.com/Product-800x800/f122163b-6b05-422b-a373-067dcd82cefe.jpg");
+        background-repeat: no-repeat;
+        background-size:cover;
+        }
+    </style>
 </style>
 {{> layout.hbs}}
