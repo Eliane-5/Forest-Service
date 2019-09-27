@@ -1,6 +1,6 @@
 {{#partial "content"}}
-    <h1>Add a Sighting!</h1>
-    <form action="/sight/new" method="post">
+    <h3>Add a Sighting!</h3>
+    <form style="color:white;" action="/sight/new" method="post">
         <div class="form-group">
             <label for="location">Location:</label><br>
             <input class="form-control" id="location" name="location" type="text"><br>
@@ -25,4 +25,11 @@
         </div>
     </form>
 {{/partial}}
+<style>
+    body{
+        background-image: url("https://outdoorarrow.com/wp-content/uploads/2018/06/Best-binocular-under-100.jpg");
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+</style>
 {{> layout.hbs}}

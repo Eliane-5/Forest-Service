@@ -1,6 +1,6 @@
 {{#partial "content"}}
-    <h3>Add a new Animal!</h3>
-        <form action="/EndangeredAnimal/new" method="post">
+    <h3 style="color:white;">Add an Endangered Animal!</h3>
+        <form style="color:white;" action="/EndangeredAnimal/new" method="post">
             <div class="form-group">
                 <label for="name">Name of animal:</label><br>
                 <input class="form-control" id="name" name="name" type="text"><br>
@@ -10,7 +10,7 @@
                 <input class="form-control" id="age" name="age" type="text"><br>
             </div>
             <div class="form-group">
-                <label for="health">On a level of 1 to 10 how healthy is the animal:</label><br>
+                <label for="health">On a scale of 1 to 10 how healthy is the animal:</label><br>
                 <input class="form-control" id="health" name="health" type="text"><br><br>
             </div>
             <div class="form-group">
@@ -18,4 +18,11 @@
             </div>
         </form>
 {{/partial}}
+<style>
+    body{
+        background-image: url("https://www.somepets.com/wp-content/gallery/hd-animal-background-wallpaper/1920x1200-ladybugs-HD-Animal-Wallpaper.jpeg");
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+</style>
 {{> layout.hbs}}
